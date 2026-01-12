@@ -21,7 +21,11 @@ export function CopyButton({ text, label = 'Copy' }: CopyButtonProps) {
   return (
     <button
       onClick={handleCopy}
-      className="px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg transition-colors duration-200 flex items-center gap-2"
+      className={`px-5 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2 shadow-md ${
+        isCopied
+          ? 'bg-green-500 text-white'
+          : 'gradient-pink text-white hover:shadow-pink'
+      }`}
       disabled={isCopied}
     >
       {isCopied ? (
@@ -35,7 +39,7 @@ export function CopyButton({ text, label = 'Copy' }: CopyButtonProps) {
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeWidth={2}
+              strokeWidth={2.5}
               d="M5 13l4 4L19 7"
             />
           </svg>

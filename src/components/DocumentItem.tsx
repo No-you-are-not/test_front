@@ -26,31 +26,35 @@ export function DocumentItem({ documentName }: DocumentItemProps) {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
-      <div className="flex items-start gap-3">
-        <svg
-          className="w-8 h-8 text-blue-500 flex-shrink-0"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"
-          />
-        </svg>
+    <div className="glass-effect rounded-2xl shadow-pink p-6 border-2 border-pink-100 hover:shadow-pink-lg transition-all duration-300 hover:scale-[1.02] animate-scale-in">
+      <div className="flex items-start gap-4">
+        <div className="flex-shrink-0">
+          <div className="w-14 h-14 gradient-soft-pink rounded-2xl flex items-center justify-center border-2 border-pink-200">
+            <svg
+              className="w-8 h-8 text-pink-600"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+              />
+            </svg>
+          </div>
+        </div>
         <div className="flex-1">
-          <h3 className="text-lg font-semibold text-gray-900 mb-3">{documentName}</h3>
+          <h3 className="text-lg font-bold text-gray-900 mb-4">{documentName}</h3>
 
           <button
             onClick={handleGenerateLink}
             disabled={isLoading}
-            className={`px-6 py-2 rounded-lg font-medium transition-colors duration-200 ${
+            className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-md ${
               isLoading
                 ? 'bg-gray-300 cursor-not-allowed'
-                : 'bg-blue-600 hover:bg-blue-700 text-white'
+                : 'gradient-pink text-white hover:shadow-pink'
             }`}
           >
             {isLoading ? (
@@ -77,31 +81,91 @@ export function DocumentItem({ documentName }: DocumentItemProps) {
                 Generating...
               </span>
             ) : (
-              'Generate Secure Link'
+              <span className="flex items-center gap-2">
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                  />
+                </svg>
+                Generate Secure Link
+              </span>
             )}
           </button>
 
           {error && (
-            <div className="mt-3 p-3 bg-red-50 border border-red-200 rounded-lg">
-              <p className="text-sm text-red-600">{error}</p>
+            <div className="mt-4 p-4 bg-red-50 border-2 border-red-200 rounded-xl animate-scale-in">
+              <div className="flex items-start gap-2">
+                <svg
+                  className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <p className="text-sm text-red-700 font-medium">{error}</p>
+              </div>
             </div>
           )}
 
           {generatedLink && (
-            <div className="mt-4 p-4 bg-green-50 border border-green-200 rounded-lg">
-              <p className="text-sm text-gray-600 mb-2">Secure link generated:</p>
+            <div className="mt-4 p-5 gradient-soft-pink border-2 border-pink-200 rounded-xl animate-scale-in">
+              <div className="flex items-center gap-2 mb-3">
+                <svg
+                  className="w-5 h-5 text-pink-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <p className="text-sm font-semibold text-pink-900">Secure link generated!</p>
+              </div>
               <div className="flex gap-2 items-center">
                 <input
                   type="text"
                   value={generatedLink}
                   readOnly
-                  className="flex-1 px-3 py-2 bg-white border border-gray-300 rounded text-sm text-gray-700 font-mono"
+                  className="flex-1 px-4 py-3 bg-white border-2 border-pink-200 rounded-xl text-sm text-gray-700 font-mono focus:outline-none focus:border-pink-400"
                 />
                 <CopyButton text={generatedLink} />
               </div>
-              <p className="text-xs text-gray-500 mt-2">
-                ⚠️ This link can only be used once
-              </p>
+              <div className="mt-3 flex items-start gap-2">
+                <svg
+                  className="w-4 h-4 text-pink-700 flex-shrink-0 mt-0.5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                  />
+                </svg>
+                <p className="text-xs text-pink-800 font-medium">
+                  This link can only be used once
+                </p>
+              </div>
             </div>
           )}
         </div>
