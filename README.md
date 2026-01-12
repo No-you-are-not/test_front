@@ -84,7 +84,3 @@ Deployed on Vercel. Set environment variable:
 - Used Claude Code to help implement React components and routing
 - Mobile-friendly responsive design
 - All TypeScript, no `any` types
-
-## License
-
-MIT
