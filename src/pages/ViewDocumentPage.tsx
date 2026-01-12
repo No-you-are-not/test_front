@@ -30,20 +30,20 @@ export function ViewDocumentPage() {
   }, [token]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-12">
+    <div className="flex items-center justify-center px-4 py-6">
       <div className="max-w-2xl w-full">
-        <div className="glass-effect rounded-3xl shadow-pink-lg p-10 border-2 border-pink-100 animate-scale-in">
+        <div className="glass-effect rounded-2xl shadow-pink-lg p-6 sm:p-8 border-2 border-pink-100 animate-scale-in">
           <div className="text-center">
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent mb-10">
+            <h1 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent mb-6">
               Super Secret Document Viewer 🕵️
             </h1>
 
             {isLoading && (
-              <div className="flex flex-col items-center gap-6">
+              <div className="flex flex-col items-center gap-4">
                 <div className="relative">
-                  <div className="w-24 h-24 gradient-pink rounded-full opacity-20 animate-ping absolute"></div>
+                  <div className="w-16 h-16 gradient-pink rounded-full opacity-20 animate-ping absolute"></div>
                   <svg
-                    className="animate-spin h-24 w-24 text-pink-600 relative"
+                    className="animate-spin h-16 w-16 text-pink-600 relative"
                     fill="none"
                     viewBox="0 0 24 24"
                   >
@@ -62,17 +62,17 @@ export function ViewDocumentPage() {
                     />
                   </svg>
                 </div>
-                <p className="text-lg text-gray-700 font-medium">Decrypting secret files... 🔐</p>
-                <p className="text-sm text-gray-500 italic">Just kidding, we're just checking if this link is still alive</p>
+                <p className="text-base text-gray-700 font-medium">Decrypting secret files... 🔐</p>
+                <p className="text-xs text-gray-500 italic">Just kidding, we're just checking if this link is still alive</p>
               </div>
             )}
 
             {!isLoading && documentName && (
-              <div className="space-y-8">
+              <div className="space-y-5">
                 <div className="flex justify-center animate-bounce-gentle">
-                  <div className="w-28 h-28 gradient-pink rounded-full flex items-center justify-center shadow-pink-lg">
+                  <div className="w-20 h-20 gradient-pink rounded-full flex items-center justify-center shadow-pink-lg">
                     <svg
-                      className="w-16 h-16 text-white"
+                      className="w-12 h-12 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -87,20 +87,20 @@ export function ViewDocumentPage() {
                   </div>
                 </div>
                 <div>
-                  <p className="text-xl text-gray-600 mb-3">
+                  <p className="text-base sm:text-lg text-gray-600 mb-2">
                     🎉 Congrats! You're now viewing the super secret file:
                   </p>
-                  <p className="text-3xl font-bold text-gray-900 mb-6">
+                  <p className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
                     {documentName}
                   </p>
-                  <p className="text-sm text-gray-500 italic">
+                  <p className="text-xs sm:text-sm text-gray-500 italic">
                     Look at you, being all secure and stuff. We're proud of you. 🥹
                   </p>
                 </div>
-                <div className="p-5 gradient-soft-pink border-2 border-pink-300 rounded-2xl">
-                  <div className="flex items-start gap-3">
+                <div className="p-4 gradient-soft-pink border-2 border-pink-300 rounded-xl">
+                  <div className="flex items-start gap-2">
                     <svg
-                      className="w-6 h-6 text-pink-700 flex-shrink-0"
+                      className="w-5 h-5 text-pink-700 flex-shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -113,10 +113,10 @@ export function ViewDocumentPage() {
                       />
                     </svg>
                     <div>
-                      <p className="text-pink-900 font-semibold mb-1">
+                      <p className="text-pink-900 font-semibold text-sm mb-1">
                         Mission Impossible Style: This link will self-destruct! 💥
                       </p>
-                      <p className="text-pink-800 text-sm">
+                      <p className="text-pink-800 text-xs">
                         (Actually, it already did. You just used it. It's dead now. RIP link 🪦)
                       </p>
                     </div>
@@ -126,11 +126,11 @@ export function ViewDocumentPage() {
             )}
 
             {!isLoading && error && (
-              <div className="space-y-8">
+              <div className="space-y-5">
                 <div className="flex justify-center animate-bounce-gentle">
-                  <div className="w-28 h-28 bg-red-500 rounded-full flex items-center justify-center shadow-lg">
+                  <div className="w-20 h-20 bg-red-500 rounded-full flex items-center justify-center shadow-lg">
                     <svg
-                      className="w-16 h-16 text-white"
+                      className="w-12 h-12 text-white"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -145,14 +145,14 @@ export function ViewDocumentPage() {
                   </div>
                 </div>
                 <div>
-                  <h2 className="text-3xl font-bold text-red-600 mb-3">Oopsie Daisy! 🙈</h2>
-                  <p className="text-xl text-gray-700 mb-6">{error}</p>
+                  <h2 className="text-2xl font-bold text-red-600 mb-2">Oopsie Daisy! 🙈</h2>
+                  <p className="text-base sm:text-lg text-gray-700 mb-4">{error}</p>
                 </div>
-                <div className="p-5 bg-red-50 border-2 border-red-200 rounded-2xl">
-                  <p className="text-red-800 font-medium mb-2">
+                <div className="p-4 bg-red-50 border-2 border-red-200 rounded-xl">
+                  <p className="text-red-800 font-medium text-sm mb-1">
                     This link is deader than a disco. 🕺💀
                   </p>
-                  <p className="text-red-700 text-sm">
+                  <p className="text-red-700 text-xs">
                     Possible reasons: Someone already viewed it, it never existed in the first place, or it ran away to join the circus.
                     We're betting on option #1 though.
                   </p>
@@ -160,13 +160,13 @@ export function ViewDocumentPage() {
               </div>
             )}
 
-            <div className="mt-10">
+            <div className="mt-6">
               <Link
                 to="/"
-                className="inline-flex items-center gap-3 px-8 py-4 gradient-pink text-white rounded-2xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-pink hover:shadow-pink-lg"
+                className="inline-flex items-center gap-2 px-6 py-3 gradient-pink text-white rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 shadow-pink hover:shadow-pink-lg text-sm"
               >
                 <svg
-                  className="w-6 h-6"
+                  className="w-5 h-5"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"

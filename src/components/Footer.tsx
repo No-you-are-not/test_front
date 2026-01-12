@@ -1,9 +1,9 @@
 export function Footer() {
   return (
-    <footer className="py-8 px-4">
+    <footer className="py-4 px-4">
       <div className="max-w-4xl mx-auto text-center">
-        <div className="glass-effect rounded-2xl shadow-pink border-2 border-pink-100 p-6">
-          <p className="text-gray-700 mb-2">
+        <div className="glass-effect rounded-xl shadow-pink border-2 border-pink-100 p-4">
+          <p className="text-sm text-gray-700 mb-1.5">
             Created & designed with 💖 by{' '}
             <a
               href="https://github.com/No-you-are-not"
@@ -18,10 +18,10 @@ export function Footer() {
             href="https://github.com/No-you-are-not"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-pink-600 transition-colors duration-300"
+            className="inline-flex items-center gap-1.5 text-xs text-gray-600 hover:text-pink-600 transition-colors duration-300"
           >
             <svg
-              className="w-5 h-5"
+              className="w-4 h-4"
               fill="currentColor"
               viewBox="0 0 24 24"
             >
