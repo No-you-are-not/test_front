@@ -78,7 +78,7 @@ export function DocumentItem({ documentName }: DocumentItemProps) {
                     d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                   />
                 </svg>
-                Generating...
+                Cooking up some magic... ✨
               </span>
             ) : (
               <span className="flex items-center gap-2">
@@ -95,7 +95,7 @@ export function DocumentItem({ documentName }: DocumentItemProps) {
                     d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
                   />
                 </svg>
-                Generate Secure Link
+                Make it Secret! 🔒
               </span>
             )}
           </button>
@@ -137,7 +137,7 @@ export function DocumentItem({ documentName }: DocumentItemProps) {
                     d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                <p className="text-sm font-semibold text-pink-900">Secure link generated!</p>
+                <p className="text-sm font-semibold text-pink-900">Ta-da! Your secret link is ready! 🎉</p>
               </div>
               <div className="flex gap-2 items-center">
                 <input
@@ -163,7 +163,7 @@ export function DocumentItem({ documentName }: DocumentItemProps) {
                   />
                 </svg>
                 <p className="text-xs text-pink-800 font-medium">
-                  This link can only be used once
+                  ⚠️ One-time use only! Like a secret handshake, but digital and less awkward.
                 </p>
               </div>
             </div>

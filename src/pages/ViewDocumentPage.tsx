@@ -35,7 +35,7 @@ export function ViewDocumentPage() {
         <div className="glass-effect rounded-3xl shadow-pink-lg p-10 border-2 border-pink-100 animate-scale-in">
           <div className="text-center">
             <h1 className="text-4xl font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent mb-10">
-              Document Viewer
+              Super Secret Document Viewer 🕵️
             </h1>
 
             {isLoading && (
@@ -62,7 +62,8 @@ export function ViewDocumentPage() {
                     />
                   </svg>
                 </div>
-                <p className="text-lg text-gray-700 font-medium">Loading document...</p>
+                <p className="text-lg text-gray-700 font-medium">Decrypting secret files... 🔐</p>
+                <p className="text-sm text-gray-500 italic">Just kidding, we're just checking if this link is still alive</p>
               </div>
             )}
 
@@ -87,10 +88,13 @@ export function ViewDocumentPage() {
                 </div>
                 <div>
                   <p className="text-xl text-gray-600 mb-3">
-                    You are now securely viewing:
+                    🎉 Congrats! You're now viewing the super secret file:
                   </p>
                   <p className="text-3xl font-bold text-gray-900 mb-6">
                     {documentName}
+                  </p>
+                  <p className="text-sm text-gray-500 italic">
+                    Look at you, being all secure and stuff. We're proud of you. 🥹
                   </p>
                 </div>
                 <div className="p-5 gradient-soft-pink border-2 border-pink-300 rounded-2xl">
@@ -108,9 +112,14 @@ export function ViewDocumentPage() {
                         d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
                       />
                     </svg>
-                    <p className="text-pink-900 font-semibold">
-                      This link has been used and cannot be accessed again
-                    </p>
+                    <div>
+                      <p className="text-pink-900 font-semibold mb-1">
+                        Mission Impossible Style: This link will self-destruct! 💥
+                      </p>
+                      <p className="text-pink-800 text-sm">
+                        (Actually, it already did. You just used it. It's dead now. RIP link 🪦)
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -136,12 +145,16 @@ export function ViewDocumentPage() {
                   </div>
                 </div>
                 <div>
-                  <h2 className="text-3xl font-bold text-red-600 mb-3">Error</h2>
+                  <h2 className="text-3xl font-bold text-red-600 mb-3">Oopsie Daisy! 🙈</h2>
                   <p className="text-xl text-gray-700 mb-6">{error}</p>
                 </div>
                 <div className="p-5 bg-red-50 border-2 border-red-200 rounded-2xl">
-                  <p className="text-red-800 font-medium">
-                    This link may have already been used or does not exist.
+                  <p className="text-red-800 font-medium mb-2">
+                    This link is deader than a disco. 🕺💀
+                  </p>
+                  <p className="text-red-700 text-sm">
+                    Possible reasons: Someone already viewed it, it never existed in the first place, or it ran away to join the circus.
+                    We're betting on option #1 though.
                   </p>
                 </div>
               </div>

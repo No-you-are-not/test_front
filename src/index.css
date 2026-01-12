@@ -4,25 +4,25 @@
 
 @layer base {
   body {
-    @apply bg-gradient-to-br from-pink-50 via-rose-50 to-purple-50;
+    @apply bg-gradient-to-br from-pink-50 via-pink-100 to-purple-100;
   }
 }
 
 @layer utilities {
   .gradient-pink {
-    background: linear-gradient(135deg, #f43f85 0%, #e11d48 100%);
+    background: linear-gradient(135deg, #ffa6c9 0%, #ffb3d9 100%);
   }
 
   .gradient-soft-pink {
-    background: linear-gradient(135deg, #fee5f0 0%, #fecdd3 100%);
+    background: linear-gradient(135deg, #fff0f6 0%, #ffe4f0 100%);
   }
 
   .shadow-pink {
-    box-shadow: 0 10px 25px -5px rgba(244, 63, 133, 0.2), 0 8px 10px -6px rgba(244, 63, 133, 0.1);
+    box-shadow: 0 10px 25px -5px rgba(255, 182, 215, 0.3), 0 8px 10px -6px rgba(255, 182, 215, 0.2);
   }
 
   .shadow-pink-lg {
-    box-shadow: 0 20px 50px -10px rgba(244, 63, 133, 0.3), 0 10px 20px -8px rgba(244, 63, 133, 0.15);
+    box-shadow: 0 20px 50px -10px rgba(255, 182, 215, 0.4), 0 10px 20px -8px rgba(255, 182, 215, 0.25);
   }
 
   .glass-effect {

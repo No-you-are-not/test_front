@@ -23,10 +23,13 @@ export function HomePage() {
             </div>
           </div>
           <h1 className="text-5xl font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent mb-4">
-            Secure Document Links
+            Shhh... Top Secret Document Stuff 🤫
           </h1>
           <p className="text-xl text-gray-700 max-w-2xl mx-auto">
-            Generate cute, secure, one-time-use links for your sensitive documents
+            Generate adorably secure, self-destructing* links for your super important documents
+          </p>
+          <p className="text-sm text-gray-500 mt-2 italic">
+            *Okay, they don't actually explode. But they DO become useless after one use. Same energy, less mess.
           </p>
         </div>
 
@@ -52,23 +55,23 @@ export function HomePage() {
               </div>
             </div>
             <div className="flex-1">
-              <h3 className="text-xl font-bold text-pink-900 mb-3">How it works</h3>
+              <h3 className="text-xl font-bold text-pink-900 mb-3">How this magic works ✨</h3>
               <ol className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full gradient-pink text-white text-xs font-bold flex items-center justify-center mt-0.5">1</span>
-                  <span>Click "Generate Secure Link" for any document</span>
+                  <span>Click the button that says "Generate Secure Link" (it's the pink one, you can't miss it)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full gradient-pink text-white text-xs font-bold flex items-center justify-center mt-0.5">2</span>
-                  <span>Copy the generated link and share it securely</span>
+                  <span>Copy the link and share it with your friend/enemy/cat (we don't judge)</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full gradient-pink text-white text-xs font-bold flex items-center justify-center mt-0.5">3</span>
-                  <span>The recipient can view the document once using the link</span>
+                  <span>They click it ONCE and see the document. Feel the power!</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="flex-shrink-0 w-6 h-6 rounded-full gradient-pink text-white text-xs font-bold flex items-center justify-center mt-0.5">4</span>
-                  <span>After viewing, the link becomes invalid for security</span>
+                  <span>Link goes "poof" 💨 and becomes more useless than a chocolate teapot</span>
                 </li>
               </ol>
             </div>
