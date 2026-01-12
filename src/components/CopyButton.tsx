@@ -2,10 +2,9 @@ import { useState } from 'react';
 
 interface CopyButtonProps {
   text: string;
-  label?: string;
 }
 
-export function CopyButton({ text, label = 'Copy' }: CopyButtonProps) {
+export function CopyButton({ text }: CopyButtonProps) {
   const [isCopied, setIsCopied] = useState(false);
 
   const handleCopy = async () => {
